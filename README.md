@@ -1,12 +1,76 @@
-# Hand-Gesture-Based-Volume-Control-
-This AI-based computer vision system controls system volume using hand gestures. By tracking the distance between thumb and index finger via webcam, it adjusts the volume in real time, offering a touch-free, intuitive alternative to physical controls.
-Project Description: Hand Gesture-Based Volume Control System
-This project is an AI-powered computer vision application that allows users to control their computer's system volume using simple hand gestures. By leveraging a webcam and real-time hand tracking, it eliminates the need for physical touch, making it highly intuitive and touchless.
+# 🖐️ Hand Gesture Based Volume Control
 
-The system captures live video through a webcam and uses a hand tracking module (built on top of MediaPipe) to detect and track the position of the user's hand. Specifically, it monitors the tips of the thumb and index finger. When the user brings these two fingers closer together or farther apart, the system measures the distance between them using basic geometry (Euclidean distance).
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white)
+![MediaPipe](https://img.shields.io/badge/MediaPipe-0097A7?style=flat)
+![Platform](https://img.shields.io/badge/Platform-Windows-blue)
 
-This distance is then mapped to the system’s volume range using interpolation. For example, a small distance might set the volume to 0%, while a wider spread between fingers sets it to 100%. This change is applied to the Windows master volume in real time using the pycaw (Python Core Audio Windows) library.
+> Control your system volume using just your hand — no keyboard, no mouse.
 
-In addition to gesture detection and volume control, the program provides real-time visual feedback. This includes drawing circles on the fingertips, a line connecting them, a volume level bar, percentage display, and frames-per-second (FPS) information—all overlaid on the video stream using OpenCV.
+---
 
-The solution is ideal for situations where hands-free interaction is beneficial—like during presentations, in clean environments, or for users with physical limitations. It serves as an innovative example of combining computer vision, gesture recognition, and system-level integration.
+## 🎯 Overview
+
+An AI-powered computer vision application that lets you control your PC's 
+volume using hand gestures via webcam. By tracking the distance between 
+your **thumb and index finger**, the system adjusts volume in real time — 
+perfect for presentations, clean rooms, or accessibility use cases.
+
+---
+
+## 🚀 How It Works
+
+1. Webcam captures live video feed
+2. **MediaPipe** detects and tracks hand landmarks
+3. Euclidean distance between thumb tip & index tip is calculated
+4. Distance is mapped (interpolated) to volume range 0–100%
+5. **pycaw** applies the volume change to Windows master audio
+6. **OpenCV** overlays visual feedback: fingertip circles, volume bar, FPS
+
+---
+
+## 🛠️ Tech Stack
+
+| Library | Purpose |
+|---|---|
+| OpenCV | Video capture & visual overlay |
+| MediaPipe | Hand landmark detection |
+| pycaw | Windows audio control |
+| NumPy | Distance calculation & interpolation |
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/Amaldaskm1234/Hand-Gesture-Based-Volume-Control-.git
+cd Hand-Gesture-Based-Volume-Control-
+pip install -r requirements.txt
+python "Hand Gesture-Based System Volume Controller.py"
+```
+
+---
+
+## 📋 Requirements
+
+```
+opencv-python
+mediapipe
+pycaw
+numpy
+comtypes
+```
+
+---
+
+## 🎮 Usage
+
+- 👌 **Pinch fingers together** → Volume decreases
+- 🤏 **Spread fingers apart** → Volume increases
+- Real-time volume bar and percentage shown on screen
+
+---
+
+## 👤 Author
+
+**Amaldas K M** — [LinkedIn](https://linkedin.com/in/amaldaskm) | [GitHub](https://github.com/Amaldaskm1234)
